@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#04090A" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.5"/>
+  <!-- D Shape & Arch -->
+  <path d="M 24 14 C 38 14, 48 21, 48 32 C 48 43, 38 50, 24 50 L 18 50 C 16.5 50, 16 49.5, 16 48 L 16 16 C 16 14.5, 16.5 14, 18 14 Z" fill="url(#glow)" />
+  <path d="M 24 20 L 21 20 L 21 44 L 24 44 C 33 44, 41 39, 41 32 C 41 25, 33 20, 24 20 Z" fill="#04090A" />
+  <!-- Center Star -->
+  <circle cx="30" cy="32" r="3.5" fill="url(#gold)" />
+</svg>
