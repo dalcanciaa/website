@@ -19,9 +19,15 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dalcanciaa.com/#values</loc>
+    <loc>https://dalcanciaa.com/privacy.html</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://dalcanciaa.com/terms.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
