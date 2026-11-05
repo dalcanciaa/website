@@ -19,13 +19,19 @@ This repository hosts the official web hub for **[Dalcanciaa.com](https://dalcan
 
 ## 📱 Ecosystem Applications
 
-1. **Dalcanciaa 13-Line Quran** *(Live / Flagship — [View Dedicated Page](quran.html))*
-   - Authentic 13-Line Indo-Pak script format with vector typography.
-   - Tajweed color-coded edition.
-   - 40+ authentic Quran Duas & Salawat collection with recitation counters.
-   - Reading analytics, consistency calendar, streaks, and completed Qurans trophy tracking.
-   - Integrated **Asma-ul-Husna (99 Names of Allah)** with meanings and audio.
-   - Night mode, offline bookmarks, reading history, and **100% ad-free**.
+1. **Quran 13 Line** *(Flagship Application — [View Dedicated Page](quran.html))*
+   - **Mushaf Reader:** Complete 13-Line IndoPak script format (847 pages in WebP) plus optional downloadable 850-page Color Tajweed rules edition.
+   - **4-in-1 Reading Mode Sheet:** Centralized modal for edition switching, persistent pinch/double-tap zoom, reading orientation (Vertical continuous scroll vs Horizontal swipe), and horizontal page transitions (Realistic page curl with paper turn sound effect vs Smooth scroll).
+   - **GPS Prayer Times & Qibla Compass:** Accurate offline timetable calculation powered by `adhan` (5 daily prayers + Sunrise) and magnetic Qibla direction finder pointing directly to the Kaaba.
+   - **Zakat Calculator & PDF Statements:** Multi-currency wealth assessment with live gold/silver Nisab checks, 2.5% calculation breakdown, shareable PDF statement exports (`ZakatPdfService`), and Islamic debt jurisprudence guidance in English and Tamil.
+   - **Islamic Hijri Calendar:** Gregorian-to-Hijri synchronization, annual Islamic events, and interactive 2-in-1 Month & Year Picker bottom sheet with authentic Arabic calligraphy.
+   - **Salawat Dhikr Counter & Analytics:** Dedicated `SalawatProvider`, SQLite persistent session tracking (`salawat_sessions`), time-window overview metrics (Today, Week, Month, All-Time), in-progress count persistence, Arabic-only display toggles, and Friday Salawat reminder notifications with live dashboard banner.
+   - **40+ Quran Duas:** Thematically categorized supplications with Arabic text, English transliteration, English and Tamil translations, scholarly canonical page references, and dynamic **"Read in Quran"** direct navigation.
+   - **Asma-ul-Husna (99 Names of Allah):** Complete 99 Divine Names with Arabic calligraphy, transliteration, English meanings, and audio pronunciation with sequential "Play All" recitation mode.
+   - **Interactive Quran Quiz:** Engaging Islamic knowledge quiz supporting English and Tamil (தமிழ்), with instant haptic applause, confetti animations, answer explanations, and report card modal.
+   - **Reading Analytics & Streaks:** Daily reading goal progress ring, consecutive reading streak counter with milestone celebrations, Khatam completion history, and granular Ayah-level chronological timeline.
+   - **Two Flavor Editions:** Available on Google Play as **Quran 13 Line** (Free with a 7-day 100% ad-free trial, optional ₹150 lifetime purchase, zero ads in reader) and **Quran 13 Line Ad-Free** (₹150 paid upfront, zero ads forever, no IAP, AdMob never initialized).
+   - **100% Offline-First & Privacy-Focused:** All reading and tools operate fully offline with zero user accounts and zero telemetry. Optional Google Drive backup.
 
 2. **Dalcanciaa Habits** *(Coming Soon)*
    - Daily 5 Salah tracking with Sunnah, Tahajjud, and Duha logging.
