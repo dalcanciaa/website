@@ -545,13 +545,45 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-actions .btn-secondary { display: none; }
-  .mobile-menu-toggle { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(3, 7, 8, 0.98);
+    padding: 22px 24px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    z-index: 999;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-actions .btn-secondary { display: none; }
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  .mobile-menu-toggle:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--border-emerald); }
   .section { padding: 70px 0; }
   .hero-phones-duo { width: 280px; height: 480px; }
   .hero-phone-back { width: 200px; }
   .hero-phone-front { width: 210px; }
+  .floating-3d-badge { display: none; }
   .phone-mockup-sm { width: 160px; }
+  .product-flagship { padding: 32px 24px; }
   .product-screenshots-fan { height: 300px; }
   .fan-1 { left: 0; }
   .fan-3 { right: 0; }
@@ -559,10 +591,53 @@ body {
   .variants-grid { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: 1fr; }
   .newsletter-form { flex-direction: column; }
+  .legal-card { padding: 36px 24px; border-radius: var(--radius-lg); }
+  .legal-header { margin-bottom: 24px; padding-bottom: 20px; }
+  .download-cta-box, .newsletter-box { padding: 44px 24px; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
   .gallery-scroll-track { gap: 16px; }
   .phone-mockup-gallery { width: 180px; }
   .feature-phones { flex-direction: column; align-items: center; }
   .feature-phone-offset { transform: none; }
+}
+
+@media (max-width: 540px) {
+  .nav-actions .btn-primary { display: none; }
+  .brand-title { font-size: 1.15rem; }
+  .brand-tagline-nav { font-size: 0.6rem; }
+  .brand-logo-icon { width: 36px; height: 36px; border-radius: 10px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+  .section { padding: 54px 0; }
+  .hero-section { padding-top: 110px; padding-bottom: 50px; min-height: auto; }
+  .hero-title { font-size: clamp(2rem, 8vw, 2.5rem); margin-bottom: 18px; }
+  .section-title { font-size: clamp(1.75rem, 7vw, 2.2rem); }
+  .hero-desc { font-size: 1.02rem; margin-bottom: 24px; }
+  .hero-cta-group { flex-direction: column; gap: 12px; width: 100%; }
+  .hero-cta-group .btn { width: 100%; justify-content: center; }
+  .hero-phones-duo { width: 250px; height: 420px; }
+  .hero-phone-back { width: 175px; }
+  .hero-phone-front { width: 185px; }
+  .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; padding-top: 20px; }
+  .stat-number { font-size: 1.3rem; }
+  .stat-label { font-size: 0.68rem; }
+  .product-flagship { padding: 24px 16px; border-radius: var(--radius-lg); }
+  .product-title { font-size: 1.5rem; }
+  .product-screenshots-fan { height: 260px; }
+  .fan-phone .phone-mockup-sm { width: 125px; border-radius: 20px; }
+  .fan-1 { left: -6px; }
+  .fan-3 { right: -6px; }
+  .product-card { padding: 24px 18px; }
+  .value-card { padding: 26px 18px; }
+  .tool-card { padding: 24px 18px; }
+  .variant-card { padding: 28px 18px; }
+  .variant-ribbon { position: static; align-self: flex-start; margin-bottom: 14px; }
+  .legal-card { padding: 28px 16px; }
+  .download-cta-box, .newsletter-box { padding: 36px 16px; border-radius: var(--radius-lg); }
+  .quran-hero-badges { justify-content: flex-start; gap: 8px; }
+  .hero-mini-badge { font-size: 0.78rem; padding: 5px 10px; }
+  .specs-table th, .specs-table td { padding: 12px 14px; font-size: 0.85rem; }
 }

@@ -75,21 +75,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const navLinks = document.getElementById('nav-links');
   if (mobileBtn && navLinks) {
-    mobileBtn.addEventListener('click', () => {
-      const isOpen = navLinks.style.display === 'flex';
-      navLinks.style.display = isOpen ? 'none' : 'flex';
-      navLinks.style.flexDirection = isOpen ? '' : 'column';
-      navLinks.style.position = isOpen ? '' : 'absolute';
-      navLinks.style.top = isOpen ? '' : '100%';
-      navLinks.style.left = isOpen ? '' : '0';
-      navLinks.style.width = isOpen ? '' : '100%';
-      navLinks.style.background = isOpen ? '' : 'rgba(3,7,8,0.97)';
-      navLinks.style.padding = isOpen ? '' : '20px 24px';
-      navLinks.style.gap = isOpen ? '' : '16px';
-      navLinks.style.borderBottom = isOpen ? '' : '1px solid rgba(255,255,255,0.08)';
-      navLinks.style.backdropFilter = isOpen ? '' : 'blur(24px)';
-      navLinks.style.zIndex = isOpen ? '' : '999';
-      mobileBtn.textContent = isOpen ? '☰' : '✕';
+    const toggleMenu = (open) => {
+      const willOpen = open !== undefined ? open : !navLinks.classList.contains('is-open');
+      navLinks.classList.toggle('is-open', willOpen);
+      mobileBtn.textContent = willOpen ? '✕' : '☰';
+      mobileBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    };
+
+    mobileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close when clicking any nav link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && e.target !== mobileBtn) {
+        toggleMenu(false);
+      }
+    });
+
+    // Reset when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navLinks.classList.contains('is-open')) {
+        toggleMenu(false);
+      }
     });
   }
 
