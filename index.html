@@ -73,7 +73,7 @@
           <span>Explore Quran App</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
       </div>
     </div>
   </header>
@@ -329,10 +329,10 @@
         <p class="section-desc" style="max-width: 600px; margin: 0 auto;">Be the first to test new releases. Zero spam, unsubscribe anytime.</p>
 
         <form class="newsletter-form" id="waitlist-form">
-          <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
-          <button type="submit" class="btn btn-primary">
+          <input type="email" id="waitlist-email" name="email" class="newsletter-input" placeholder="Enter your email address..." aria-label="Email address" required>
+          <button type="submit" class="btn btn-primary" aria-label="Submit email to get early access">
             <span>Get Early Access</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
         </form>
         <div id="waitlist-success-msg" style="display: none; margin-top: 20px; color: var(--emerald-light); font-weight: 700; font-size: 1.05rem;"></div>
@@ -353,7 +353,7 @@
           <p class="footer-desc">Purpose-built Islamic & lifestyle digital experiences. Exquisite craft, authentic devotion, privacy-first engineering.</p>
         </div>
         <div class="footer-col">
-          <h4>Applications</h4>
+          <h3>Applications</h3>
           <ul class="footer-links">
             <li><a href="quran.html">Quran 13 Line</a></li>
             <li><a href="#products">Dalcanciaa Habits</a></li>
@@ -361,7 +361,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h3>Explore</h3>
           <ul class="footer-links">
             <li><a href="#values">Our Philosophy</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
