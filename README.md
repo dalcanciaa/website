@@ -19,7 +19,7 @@ This repository hosts the official web hub for **[Dalcanciaa.com](https://dalcan
 
 ## 📱 Ecosystem Applications
 
-1. **Quran 13 Line** *(Flagship Application — [View Dedicated Page](quran.html))*
+1. **Quran 13 Line** *(Flagship Application — [Google Play Store](https://play.google.com/store/apps/details?id=com.dalcanciaa.quran_13_line) • [View Dedicated Page](quran.html))*
    - **Mushaf Reader:** Complete 13-Line IndoPak script format (847 pages in WebP) plus optional downloadable 850-page Color Tajweed rules edition.
    - **4-in-1 Reading Mode Sheet:** Centralized modal for edition switching, persistent pinch/double-tap zoom, reading orientation (Vertical continuous scroll vs Horizontal swipe), and horizontal page transitions (Realistic page curl with paper turn sound effect vs Smooth scroll).
    - **GPS Prayer Times & Qibla Compass:** Accurate offline timetable calculation powered by `adhan` (5 daily prayers + Sunrise) and magnetic Qibla direction finder pointing directly to the Kaaba.

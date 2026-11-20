@@ -154,6 +154,78 @@ body {
 .btn-secondary { background: rgba(255,255,255,0.06); color: #fff; border: 1px solid var(--border-subtle); backdrop-filter: blur(12px); }
 .btn-secondary:hover { background: rgba(255,255,255,0.12); border-color: var(--border-emerald); transform: translateY(-2px); color: var(--emerald-light); }
 
+/* Google Play Store Button */
+.btn-playstore {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 22px;
+  background: rgba(10, 23, 26, 0.95);
+  border: 1.5px solid rgba(16, 185, 129, 0.45);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  color: #fff;
+  transition: all var(--transition-smooth);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-playstore::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transition: left 0.6s ease;
+}
+.btn-playstore:hover::before {
+  left: 100%;
+}
+.btn-playstore:hover {
+  transform: translateY(-2px);
+  border-color: var(--emerald-primary);
+  background: rgba(13, 31, 35, 0.98);
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.4), 0 0 25px rgba(16, 185, 129, 0.25);
+  color: #fff;
+}
+.btn-playstore .playstore-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+.btn-playstore-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1.15;
+}
+.btn-playstore-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.btn-playstore-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.btn-playstore.btn-lg {
+  padding: 12px 26px;
+}
+.btn-playstore.btn-lg .playstore-icon {
+  width: 28px;
+  height: 28px;
+}
+.btn-playstore.btn-lg .btn-playstore-title {
+  font-size: 1.25rem;
+}
+
 /* ========== HERO ========== */
 .hero-section { padding-top: 160px; padding-bottom: 80px; min-height: 90vh; display: flex; align-items: center; }
 .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
@@ -635,7 +707,8 @@ body {
   .section-title { font-size: clamp(1.75rem, 7vw, 2.2rem); }
   .hero-desc { font-size: 1.02rem; margin-bottom: 24px; }
   .hero-cta-group { flex-direction: column; gap: 12px; width: 100%; }
-  .hero-cta-group .btn { width: 100%; justify-content: center; }
+  .hero-cta-group .btn,
+  .hero-cta-group .btn-playstore { width: 100%; justify-content: center; }
   .hero-phones-duo { width: 250px; height: 420px; }
   .hero-phone-back { width: 175px; }
   .hero-phone-front { width: 185px; }
